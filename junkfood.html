@@ -1,0 +1,357 @@
+<html>
+<head>
+<title>Menu</title>
+<style>
+/* ================= MENU SECTION ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.menu{
+    background:#111;
+    padding:100px 8%;
+    color:#fff;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("images/picture.png");
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#ff9f1c;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#bbb;
+    font-size:17px;
+}
+
+/* Filter Buttons */
+
+.menu-filter{ 
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:50px; 	
+}
+
+.menu-filter button{
+    background:#222;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.menu-filter button:hover,
+.menu-filter .active{
+    background:#ff9f1c;
+    color:#fff;
+}
+
+/* Grid */
+
+.menu-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Card */
+
+.menu-card{
+    background:#1b1b1b;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+    border:1px solid #2b2b2b;
+}
+
+.menu-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(255,159,28,.2);
+}
+
+.menu-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.menu-card:hover img{
+    transform:scale(1.08);
+}
+
+.menu-content{
+    padding:20px;
+}
+
+.menu-content h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.menu-content p{
+    color:#aaa;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* Price & Rating */
+
+.menu-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.price{
+    color:#ff9f1c;
+    font-size:22px;
+    font-weight:700;
+}
+
+.rating{
+    color:#FFD700;
+}
+
+/* Button */
+
+.order-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#ff9f1c;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#ffb347;
+    transform:translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .menu-filter{
+        gap:10px;
+    }
+
+    .menu-filter button{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+}
+.navbar{
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-images:url("C:\Users\User\Desktop\my project1\images\picture1.jpeg");
+    padding:25px 8%;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    backdrop-filter:blur(10px);
+
+    background:black;
+
+    z-index:1000;
+}
+
+.logo{
+
+    font-size:35px;
+    font-weight:700;
+    color:red;
+}
+
+.logo i{
+
+    margin-right:8px;
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+
+    color:#ffb400;
+}
+.btn{
+
+    text-decoration:none;
+    background:#ffb400;
+    color:#111;
+    padding:12px 26px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:white;
+}
+</style>
+</head>
+<body>
+<header>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+          🍽️  Royal Taste
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" target="blank">About Us</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="index.html" target="blank">Gallery</a></li>
+            <li><a href="index.html" target="blank">Contact</a></li>
+            <li><a href="index.html" target="blank">Special Menu</a></li>
+            <li><a href="index.html" target="blank">Reviews</a></li>
+            
+        </ul> 
+
+        <a href="#table" class="btn">Reserve Table</a>
+    </nav>
+</header>
+<section class="menu" id="menu">
+
+    <div class="section-title">
+        <h2>Our Fast Foods</h2>
+        <p>Freshly prepared dishes made with premium ingredients.</p>
+    </div>
+
+     <div class="menu-filter">
+        <a href="menu.html"><button>Tea-Coffees</button></a>
+        <a href="tiffins.html"><button>Tiffins</button></a>
+        <a href="lunch.html"><button>Lunch</button></a>
+       <a href="junkfood.html"><button class="active">Junk-Food</button></a>
+        <a href="cool.html"><button>Cool-Drinks</button></a>
+        <a href="baked.html"><button>Backed Foods</button></a>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="menu-card">
+            <img src="images\noodles.jpg" alt="fast">
+            <div class="menu-content">
+                <h3>Chicken Noodle</h3>
+                <div class="menu-info">
+                    <span class="price">₹99</span>
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/burger1.jpg" alt="fast">
+            <div class="menu-content">
+                <h3>Burger</h3>
+                <div class="menu-info">
+                    <span class="price">₹139</span>
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/65.jfif" alt="fast">
+            <div class="menu-content">
+                <h3>Chicken 65</h3>
+                <div class="menu-info">
+                    <span class="price">₹199</span>
+                    <span class="rating">⭐⭐⭐⭐☆</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/rice.jpg" alt="fast">
+            <div class="menu-content">
+                <h3>Fried Rice</h3>
+                <div class="menu-info">
+                    <span class="price">₹149</span>
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="images/wing.jpg" alt="fast">
+            <div class="menu-content">
+                <h3>Chicken Wings</h3>
+                <div class="menu-info">
+                    <span class="price">₹199</span>
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+         <div class="menu-card">
+            <img src="images/pizza.jpg" alt="fast">
+            <div class="menu-content">
+                <h3>Pizza</h3>
+                <div class="menu-info">
+                    <span class="price">₹299</span>
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+
+                <a href="#" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
