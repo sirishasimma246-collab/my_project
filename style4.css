@@ -3125,4 +3125,102 @@ textarea::placeholder{
 
 
 }
+.order-page {
+    display: none;
+}
+
+.order-page:target {
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #fff8f0;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.order-card {
+    width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.order-card img {
+    width: 250px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.order-card h1 {
+    color: #333;
+
+    margin-top: 20px;
+}
+
+.order-card h2 {
+    color: #28a745;
+
+    margin-top: 15px;
+}
+
+.order-card p {
+    color: #555;
+
+    font-size: 17px;
+}
+
+.order-btn {
+    display: inline-block;
+
+    background: #e67e22;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background: #d35400;
+}
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #e67e22;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
 	
