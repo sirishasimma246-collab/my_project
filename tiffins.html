@@ -230,6 +230,105 @@
 
     background:white;
 }
+.order-page {
+    display: none;
+}
+
+.order-page:target {
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #fff8f0;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.order-card {
+    width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.order-card img {
+    width: 250px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.order-card h1 {
+    color: #333;
+
+    margin-top: 20px;
+}
+
+.order-card h2 {
+    color: #28a745;
+
+    margin-top: 15px;
+}
+
+.order-card p {
+    color: #555;
+
+    font-size: 17px;
+}
+
+.order-btn {
+    display: inline-block;
+
+    background: #e67e22;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background: #d35400;
+}
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #e67e22;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
 </style>
 </head>
 <body>
@@ -268,7 +367,7 @@
         <a href="tiffins.html"><button class="active">Tiffins</button></a>
         <a href="lunch.html"><button>Lunch</button></a>
        <a href="junkfood.html" ><button>Junk-Food</button></a>
-        <a href="cool.html"><button>Cool-Drinks</button></a>
+        <a href="cool.html"><button>Mocktails</button></a>
         <a href="baked.html"><button>Backed Foods</button></a>
     </div>
 
@@ -279,13 +378,12 @@
             <img src="images\idly.jpg" alt="tiffin">
             <div class="menu-content">
                 <h3>Idly</h3>
-               <p>Hot and Soft Idly</p>
                 <div class="menu-info">
                     <span class="price">₹75</span>
                     <span class="rating">⭐⭐⭐⭐⭐</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#idly" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
 
@@ -298,7 +396,7 @@
                     <span class="rating">⭐⭐⭐⭐⭐</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#dosa" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
 
@@ -311,7 +409,7 @@
                     <span class="rating">⭐⭐⭐⭐☆</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#upma" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
 
@@ -324,7 +422,7 @@
                     <span class="rating">⭐⭐⭐⭐⭐</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#vada" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
         <div class="menu-card">
@@ -336,7 +434,7 @@
                     <span class="rating">⭐⭐⭐⭐⭐</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#bonda" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
          <div class="menu-card">
@@ -348,11 +446,119 @@
                     <span class="rating">⭐⭐⭐⭐⭐</span>
                 </div>
 
-                <a href="#" class="order-btn">Order Now</a>
+                <a href="#poori" target="blank" class="order-btn">Order Now</a>
             </div>
         </div>
     </div>
 
 </section>
+<div id="idly" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/idly.jpg" alt="tiffins">
+
+        <h1>Idly</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
+
+
+<div id="dosa" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/dosa.jpg" alt="tiffins">
+
+        <h1>Dosa</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
+<div id="upma" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/upma.jpg" alt="tiffins">
+
+        <h1>Upma</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
+
+
+<div id="vada" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/vada.jpg" alt="tiffins">
+
+        <h1>Vadal</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
+<div id="bonda" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/bonda.jpg" alt="tiffins">
+
+        <h1>Bonda</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
+
+
+<div id="poori" class="order-page">
+
+    <div class="order-card">
+
+        <img src="images/poori.jpg" alt="tiffins">
+
+        <h1>Poori</h1>
+
+        <h2>Your Order is Confirmed!</h2>
+
+        <p>Thank you for ordering from my restaurant.</p>
+
+        <a href="tiffins.html" class="back-btn">Back to Menu</a>
+
+    </div>
+
+</div>
 </body>
 </html>
